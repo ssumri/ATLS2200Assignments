@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mid-term page 5</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/html-midterm/page1.html">Page 1</a>
+      <span> | </span>
+      <a href="/html-midterm/page2.html">Page 2</a>
+      <span> | </span>
+      <a href="/html-midterm/page3.html">Page 3</a>
+      <span> | </span>
+      <a href="/html-midterm/page4.html">Page 4</a>
+      <span> | </span>
+      <a href="/html-midterm/page5.html">Page 5</a>
+      <span> | </span>
+    </div>
+
+    <h1>Change Log</h1>
+    <div>
+      <h3>Page 1 changes:</h3>
+      <ul>
+        <li>
+          Line 44: I was getting an error because the tr tag was opened and
+          never closed. I added end tag for tr inside table.
+        </li>
+        <li>
+          Line 45: I was getting an error because the table tag was opened and
+          never closed. I added end tag for table.
+        </li>
+        <li>
+          Line 2: Language was not specified in the html tag. I added lang="en"
+          to the html tag.
+        </li>
+        <li>
+          Line 30: The image tag's source was not valid since that image did not
+          exist. I changed the src element to contain a relative path to an
+          existing image.
+        </li>
+        <li>Line 1: No meta tags on this link. I have added them.</li>
+      </ul>
+      <h3>Page 2 changes:</h3>
+      <ul>
+        <li>
+          Line 27: Empty tag that should contain the end tag for the bold tag. I
+          added '/'b into the empty tag to get rid of the error and only bolden
+          the text that says "New Beehive Inn"
+        </li>
+        <li>
+          Line 31-36: The end paragraph tag on line 31 was giving an error
+          because it could not find the starting pair for that tag. I fixed this
+          by indenting lines 31-36 appropriately.
+        </li>
+        <li>
+          Line 53: The h2 tag cannot be inside the bold tags because the tag
+          itself cannot be boldened. I fixed this issue by rearranging the
+          nested tags to contain the bold tags inside the h2 tags.
+        </li>
+        <li>
+          Line 57: The href element on the anchor tag had text instead of a
+          valid link/path. Since the source to this page is provided in the
+          navbar, I used the wikipedia link to get what the original text linked
+          to and used an absolute path to link the text to the appropriate
+          wikipedia page.
+        </li>
+        <li>
+          Line 74: The h6 tag was never closed when titiling this section and
+          thus the program thinks i am trying to add an hr tag inside the h6
+          tag. I added the ending tag so the error would cease.
+        </li>
+        <li>
+          Structure: The sections of this page are not following a single method
+          and is ranging from h2 to h6. I will add the horizontal line to be
+          before the h2 section titles on all sections to make the page more
+          cohesive.
+        </li>
+        <li>
+          Line 24: The title is wrong for this page. The linked wikipedia is
+          titled the New Beehive Inn so I have changed the name accordingly.
+        </li>
+        <li>
+          Line 52: The href to "bay" was a broken link. I linked the appropriate
+          wikipedia link.
+        </li>
+      </ul>
+      <h3>Page 3 changes:</h3>
+      <ul>
+        <li>
+          Line 4: As the comment states, the page is missing all of the title,
+          meta and a link to the stylesheet. I have added all of these
+          acordingly. Also added the language element to the html.
+        </li>
+        <li>
+          Line 1: Doctype was not specified as HTML. I added that line at the
+          top of the file.
+        </li>
+        <li>
+          Logic: Footer is not anchored at the bottom of the page. I fixed this
+          in the css code by setting the footer position to be relative.
+        </li>
+      </ul>
+      <h3>Page 4 changes:</h3>
+      <ul>
+        <li>
+          Line 1: Doctype was not specified as HTML. I added that line at the
+          top of the file.
+        </li>
+        <li>
+          Line 37-39, 42-44, 47-49: image tags do not have an alt element. i
+          added all of the alt elements after looking at the images.
+        </li>
+        <li>Line 43, 48: added the td tags to the images</li>
+        <li>
+          Logic: fixed the table so that the column headings align with the
+          cooresponding images.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
