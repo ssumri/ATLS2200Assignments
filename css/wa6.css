@@ -1,0 +1,34 @@
+body {
+  background-image: url("../img/wa6/mbappe.jpeg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  height: 100px;
+  width: 220px;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.flags {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.flags img {
+  height: 100px;
+}
+
+.flags h1 {
+  color: white;
+  font-family: fantasy;
+  font-size: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
