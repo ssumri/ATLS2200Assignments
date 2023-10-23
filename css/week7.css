@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+nav {
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20px;
+  background-color: seagreen;
+}
+nav a {
+  width: 10vw;
+  text-align: center;
+  text-decoration: none;
+  color: darkblue;
+}
+
+nav a:hover {
+  color: pink;
+}
+
+img {
+  width: 30vw;
+  height: 30vh;
+}
+
+h1 {
+  font-family: system-ui;
+}
+
+#red-ball {
+  background-color: pink;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 5vw;
+  top: 0;
+  animation-name: ballAnimate;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+}
+
+@keyframes ballAnimate {
+  0% {
+    background-color: pink;
+    left: 0px;
+    top: 25px;
+  }
+  20% {
+    background-color: pink;
+    left: 75px;
+    top: 100px;
+  }
+  40% {
+    background-color: pink;
+    left: 50px;
+    top: 0px;
+  }
+  60% {
+    background-color: pink;
+    left: 0px;
+    top: 100px;
+  }
+  80% {
+    background-color: pink;
+    left: 100px;
+    top: 25px;
+  }
+  100% {
+    background-color: pink;
+    left: 0px;
+    top: 25px;
+  }
+}
