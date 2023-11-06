@@ -30,6 +30,10 @@
   }
 }
 
+h1 {
+  text-align: center;
+}
+
 h2 {
   font-size: 20px;
   margin-bottom: 0px;
@@ -57,4 +61,9 @@ h4 {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
+}
+
+p.summary {
+  text-align: center;
+  font-size: 10px;
 }
