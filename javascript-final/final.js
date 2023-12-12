@@ -7,10 +7,19 @@ $(document).ready(function () {
   $("#increase").click(increase);
   $("#submit").click(submit);
   $("#reset").click(reset);
+  const resetBtn = document.getElementById("reset");
+
+  resetBtn.addEventListener("mouseover", function () {
+    resetBtn.style.left = `${Math.ceil(Math.random() * 90)}%`;
+    resetBtn.style.top = `${Math.ceil(Math.random() * 90)}%`;
+    resetBtn.textContent = "are you sure?";
+  });
 });
 
 function submit() {
   alert("You submitted: " + numberToString(current));
+  current = 0;
+  updateDisplay();
 }
 
 function numberToString(p) {

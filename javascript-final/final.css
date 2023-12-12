@@ -2,17 +2,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: darkgreen;
 }
 
 #container {
   margin: 15px;
-  padding: 10px;
-  background-color: darkgreen;
+  padding: 20px;
+  background-color: palevioletred;
   color: wheat;
   display: inline-block;
   font-size: 16pt;
+  border-radius: 10px;
 }
 
 button {
   font-size: 15pt;
+  margin-right: 2px;
+}
+
+#reset {
+  position: absolute;
+  transition: 0.5s;
 }
