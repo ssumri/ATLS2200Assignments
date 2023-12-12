@@ -2,6 +2,10 @@ var upper = 9999999999;
 var lower = 0;
 var current = 0;
 
+var helpmade = false;
+
+var counter = 0;
+
 $(document).ready(function () {
   updateDisplay();
   $("#increase").click(increase);
@@ -32,17 +36,30 @@ function updateDisplay() {
 
 function increase() {
   current = current + Math.floor(Math.random() * (upper / 5));
+  counter = counter + 1;
   if (current >= upper) {
     alert("Resetting");
     reset();
     return;
+  } else if (counter == 5 && !helpmade) {
+    helpFcn();
   }
   updateDisplay();
 }
 
 function reset() {
   current = 0;
+  counter = 0;
   updateDisplay();
+}
+
+function helpFcn() {
+  if (document.getElementById("help") == null) {
+    const helpBtn = document.createElement("button");
+    helpBtn.setAttribute("id", "help");
+    helpBtn.textContent = "Help ME";
+    document.getElementById("container").appendChild(helpBtn);
+  }
 }
 
 // Critique comments:

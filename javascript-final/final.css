@@ -1,26 +1,93 @@
+html,
 body {
+  width: 100%;
+  height: 100%;
+  font-family: OCR A Std, monospace;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: darkgreen;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #container {
+  max-width: 100%;
   margin: 15px;
   padding: 20px;
-  background-color: palevioletred;
+  background: rgba(#fff, #fff, #fff, 0.5);
   color: wheat;
   display: inline-block;
   font-size: 16pt;
+  border: 1px solid white;
   border-radius: 10px;
 }
 
+/* button css from https://codepen.io/loganliffick/pen/WNdZQZQ */
+/* hope this is ok since I credited it and modified it but if there is an issue, please let me know and I will remove it ASAP */
 button {
   font-size: 15pt;
+  font-family: OCR A Std, monospace;
   margin-right: 2px;
+  animation: 1.5s ease infinite alternate running shimmer;
+  background: linear-gradient(90deg, #64e3ff 30%, #9192ff 85%);
+  background-size: 200% 100%;
+  border: none;
+  border-radius: 6px;
+  box-shadow: -2px -2px 10px rgba(255, 227, 126, 0.5),
+    2px 2px 10px rgba(144, 148, 255, 0.5);
+  color: #170f1e;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 24px;
+  overflow: hidden;
+  padding: 12px 24px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s;
+
+  svg {
+    left: -20px;
+    opacity: 0.5;
+    position: absolute;
+    top: -2px;
+    transition: 0.5s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+  }
+
+  &:active {
+    transform: scale(0.95) rotate(-3deg);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    background-size: 100% 100%;
+    box-shadow: -2px -2px 6px rgba(255, 227, 126, 0.5),
+      2px 2px 6px rgba(144, 148, 255, 0.5);
+  }
 }
 
 #reset {
   position: absolute;
   transition: 0.5s;
+}
+
+#help {
+  font-size: 10pt;
+  background-color: palegreen;
 }
