@@ -6,6 +6,7 @@ $(document).ready(function () {
   updateDisplay();
   $("#increase").click(increase);
   $("#submit").click(submit);
+  $("#reset").click(reset);
 });
 
 function submit() {
@@ -21,6 +22,19 @@ function updateDisplay() {
 }
 
 function increase() {
-  current = current + 1;
+  current = current + Math.floor(Math.random() * (upper / 5));
+  if (current >= upper) {
+    alert("Resetting");
+    reset();
+    return;
+  }
   updateDisplay();
 }
+
+function reset() {
+  current = 0;
+  updateDisplay();
+}
+
+// Critique comments:
+//
