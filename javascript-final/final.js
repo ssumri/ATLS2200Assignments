@@ -5,24 +5,13 @@ var current = 0;
 var helpmade = false;
 
 var counter = 0;
+var decCounter = 0;
 
 $(document).ready(function () {
-  // resetBtn;
-  // helpBtn;
-  // submitBtn;
   updateDisplay();
   $("#increase").click(increase);
   $("#submit").click(submit);
-  $("#reset").click(reset);
   $("#help").click(decrease);
-  // const resetBtn = document.getElementById("reset");
-  // // resetBtn.style.visibility = "visible";
-
-  // resetBtn.addEventListener("mouseover", function () {
-  //   resetBtn.style.left = `${Math.ceil(Math.random() * 90)}%`;
-  //   resetBtn.style.top = `${Math.ceil(Math.random() * 90)}%`;
-  //   resetBtn.textContent = "are you sure?";
-  // });
 });
 
 function submit() {
@@ -54,6 +43,9 @@ function increase() {
   } else if (counter == 5 && !helpmade) {
     helpFcn();
   }
+  if (counter % 5 == 1) {
+    p;
+  }
   updateDisplay();
 }
 
@@ -71,11 +63,13 @@ function decrease() {
 
 function helpFcn() {
   helpmade = true;
-  const helpBtn = document.createElement("button");
-  helpBtn.setAttribute("id", "help");
-  helpBtn.textContent = "decrease";
+  helpBtn = document.getElementById("help");
+  // const helpBtn = document.createElement("button");
+  // helpBtn.setAttribute("id", "help");
+  helpBtn.style.visibility = "visible";
   document.getElementById("container").appendChild(helpBtn);
   helpBtn.addEventListener("click", decrease());
 }
+
 // Critique comments:
 //
