@@ -7,23 +7,33 @@ var helpmade = false;
 var counter = 0;
 
 $(document).ready(function () {
+  // resetBtn;
+  // helpBtn;
+  // submitBtn;
   updateDisplay();
   $("#increase").click(increase);
   $("#submit").click(submit);
   $("#reset").click(reset);
-  const resetBtn = document.getElementById("reset");
+  $("#help").click(decrease);
+  // const resetBtn = document.getElementById("reset");
+  // // resetBtn.style.visibility = "visible";
 
-  resetBtn.addEventListener("mouseover", function () {
-    resetBtn.style.left = `${Math.ceil(Math.random() * 90)}%`;
-    resetBtn.style.top = `${Math.ceil(Math.random() * 90)}%`;
-    resetBtn.textContent = "are you sure?";
-  });
+  // resetBtn.addEventListener("mouseover", function () {
+  //   resetBtn.style.left = `${Math.ceil(Math.random() * 90)}%`;
+  //   resetBtn.style.top = `${Math.ceil(Math.random() * 90)}%`;
+  //   resetBtn.textContent = "are you sure?";
+  // });
 });
 
 function submit() {
-  alert("You submitted: " + numberToString(current));
-  current = 0;
-  updateDisplay();
+  if (current >= 1000000000) {
+    alert("You submitted: " + numberToString(current));
+    current = 0;
+    updateDisplay();
+  } else {
+    alert("Invalid phone number");
+    updateDisplay();
+  }
 }
 
 function numberToString(p) {
@@ -53,14 +63,19 @@ function reset() {
   updateDisplay();
 }
 
-function helpFcn() {
-  if (document.getElementById("help") == null) {
-    const helpBtn = document.createElement("button");
-    helpBtn.setAttribute("id", "help");
-    helpBtn.textContent = "Help ME";
-    document.getElementById("container").appendChild(helpBtn);
-  }
+function decrease() {
+  console.log("decreasing by 1");
+  current = current - 1;
+  updateDisplay();
 }
 
+function helpFcn() {
+  helpmade = true;
+  const helpBtn = document.createElement("button");
+  helpBtn.setAttribute("id", "help");
+  helpBtn.textContent = "decrease";
+  document.getElementById("container").appendChild(helpBtn);
+  helpBtn.addEventListener("click", decrease());
+}
 // Critique comments:
 //
